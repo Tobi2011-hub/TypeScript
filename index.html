@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple interactive vehicle dashboard built with TypeScript."
+    />
+    <title>Vehicle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="vehicle.js" defer></script>
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Drive home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 15.5 5.7 9a2 2 0 0 1 1.94-1.5h8.72A2 2 0 0 1 18.3 9l1.7 6.5" />
+              <path d="M3.5 14.5h17v4h-17zM6.5 18.5v1m11-1v1M6 14.5l1.5-3h9l1.5 3" />
+              <circle cx="7" cy="16.5" r=".75" />
+              <circle cx="17" cy="16.5" r=".75" />
+            </svg>
+          </span>
+          <span>motion<span class="brand-dot">.</span></span>
+        </a>
+        <span class="topbar-label"><span class="live-dot"></span> YOUR GARAGE</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR RIDE, AT A GLANCE</p>
+          <h1 id="page-title">Ready when<br />you <span>are.</span></h1>
+          <p class="intro">Everything looks good. Your next drive is just one button away.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-glow"></div>
+          <svg class="hero-car" viewBox="0 0 620 260" fill="none">
+            <path class="car-shadow" d="M82 208h462" />
+            <path class="car-body" d="m93 177 15-43c6-17 20-29 38-34l91-25c17-5 35-5 52-1l80 19c18 4 34 15 44 30l30 45 51 12c12 3 20 13 20 25v12H80v-19c0-10 5-18 13-21Z" />
+            <path class="car-window" d="m166 136 16-29c4-7 9-11 18-13l52-14v56H166Zm99-56 19-1c7 0 14 1 21 3l57 14c8 2 15 7 20 14l19 26H265V80Z" />
+            <path class="car-detail" d="M94 177h420m-258-42h79m-178 50h-22" />
+            <path class="car-light" d="m93 177 26-5m389 5-25-5" />
+            <circle class="wheel" cx="173" cy="197" r="31" />
+            <circle class="wheel-core" cx="173" cy="197" r="14" />
+            <circle class="wheel" cx="438" cy="197" r="31" />
+            <circle class="wheel-core" cx="438" cy="197" r="14" />
+            <path class="sparkle" d="m511 69 5 12 12 5-12 5-5 12-5-12-12-5 12-5 5-12Z" />
+            <path class="sparkle small" d="m111 91 3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="vehicle-card" aria-labelledby="car-model">
+        <div class="card-top">
+          <div class="vehicle-heading">
+            <p class="eyebrow">YOUR VEHICLE</p>
+            <h2 id="car-model">Car model</h2>
+          </div>
+          <span class="year-badge"><span id="car-year"></span> MODEL</span>
+        </div>
+
+        <div class="card-divider"></div>
+
+        <div class="card-bottom">
+          <div class="make-info">
+            <span class="make-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3 3.5 7.5v9L12 21l8.5-4.5v-9L12 3Z" />
+                <path d="m3.8 7.7 8.2 4.5 8.2-4.5M12 12.5V21" />
+              </svg>
+            </span>
+            <span class="make-label"><span>MAKE</span><strong id="car-make"></strong></span>
+          </div>
+
+          <div class="status" id="status" aria-live="polite">
+            <span class="status-indicator"></span>
+            <p id="status-message">Parked and ready</p>
+          </div>
+
+          <button class="start-button" id="start-button" type="button">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m9 6 9 6-9 6V6Z" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Start engine</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>MADE FOR THE OPEN ROAD</span>
+        <span>01 <span class="footer-divider">/</span> 01</span>
+      </footer>
+    </main>
+  </body>
+</html>

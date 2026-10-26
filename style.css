@@ -1,0 +1,467 @@
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", sans-serif;
+  color: #f4f2ec;
+  background: #101412;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --accent: #c5f36b;
+  --muted: #858c86;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 76% 28%, rgb(68 89 66 / 15%), transparent 36%),
+    #101412;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.dashboard {
+  width: min(100% - 64px, 1080px);
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #f4f2ec;
+  font-family: Manrope, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: #101412;
+  background: var(--accent);
+  border-radius: 11px;
+}
+
+.brand-mark svg,
+.make-icon svg {
+  width: 22px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.brand-dot {
+  color: var(--accent);
+}
+
+.topbar-label,
+.eyebrow,
+.year-badge,
+.make-label > span,
+.footer {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.topbar-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #a3aaa3;
+}
+
+.live-dot,
+.status-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgb(197 243 107 / 48%);
+}
+
+.hero {
+  min-height: 390px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+.hero-copy {
+  z-index: 1;
+  max-width: 390px;
+  padding: 50px 0 58px;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--accent);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Manrope, sans-serif;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(54px, 8vw, 76px);
+  font-weight: 600;
+  letter-spacing: -5px;
+  line-height: 0.99;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.intro {
+  max-width: 310px;
+  margin-bottom: 0;
+  color: #9da49e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hero-art {
+  width: 64%;
+  height: 100%;
+  position: absolute;
+  right: -4%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.art-glow {
+  width: 470px;
+  height: 230px;
+  position: absolute;
+  top: 42%;
+  right: 4%;
+  border-radius: 50%;
+  background: rgb(197 243 107 / 7%);
+  filter: blur(70px);
+}
+
+.hero-car {
+  width: min(100%, 620px);
+  position: relative;
+  margin-top: 65px;
+  overflow: visible;
+}
+
+.car-shadow {
+  stroke: rgb(197 243 107 / 30%);
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.car-body {
+  fill: #c5f36b;
+}
+
+.car-window {
+  fill: #24312a;
+}
+
+.car-detail {
+  stroke: #748f3e;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.car-light {
+  stroke: #f4f2ec;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+
+.wheel {
+  fill: #101412;
+  stroke: #58634c;
+  stroke-width: 4;
+}
+
+.wheel-core {
+  fill: #303a30;
+  stroke: #89957c;
+  stroke-width: 3;
+}
+
+.sparkle {
+  fill: var(--accent);
+}
+
+.sparkle.small {
+  opacity: 0.55;
+}
+
+.vehicle-card {
+  margin-top: 34px;
+  padding: 26px 30px 24px;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 14px;
+  background: linear-gradient(130deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
+}
+
+.card-top,
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vehicle-heading .eyebrow {
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+}
+
+.year-badge {
+  padding: 9px 12px;
+  color: var(--accent);
+  border: 1px solid rgb(197 243 107 / 23%);
+  border-radius: 6px;
+  background: rgb(197 243 107 / 6%);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.year-badge span {
+  margin-right: 4px;
+}
+
+.card-divider {
+  height: 1px;
+  margin: 22px 0;
+  background: rgb(255 255 255 / 8%);
+}
+
+.make-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.make-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  border: 1px solid rgb(197 243 107 / 19%);
+  border-radius: 9px;
+  background: rgb(197 243 107 / 6%);
+}
+
+.make-label {
+  display: grid;
+  gap: 4px;
+}
+
+.make-label > span {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.make-label strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #a3aaa3;
+  font-size: 12px;
+}
+
+.status p {
+  margin-bottom: 0;
+}
+
+.status-indicator {
+  width: 6px;
+  height: 6px;
+  background: #777e78;
+  box-shadow: none;
+}
+
+.status.is-running .status-indicator {
+  background: var(--accent);
+  box-shadow: 0 0 12px rgb(197 243 107 / 48%);
+}
+
+.start-button {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  color: #151a13;
+  border: 0;
+  border-radius: 7px;
+  background: var(--accent);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.start-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #d5ff83;
+  box-shadow: 0 8px 24px rgb(197 243 107 / 18%);
+}
+
+.start-button:focus-visible {
+  outline: 2px solid #f4f2ec;
+  outline-offset: 4px;
+}
+
+.start-button:disabled {
+  cursor: default;
+  background: #a9ca67;
+}
+
+.start-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 26px 0;
+  color: #707871;
+  font-size: 8px;
+}
+
+.footer-divider {
+  padding: 0 5px;
+  color: var(--accent);
+}
+
+@media (min-height: 850px) {
+  .hero {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard {
+    width: min(100% - 36px, 500px);
+  }
+
+  .topbar {
+    height: 72px;
+  }
+
+  .hero {
+    min-height: 440px;
+    align-items: flex-start;
+  }
+
+  .hero-copy {
+    padding-top: 53px;
+  }
+
+  h1 {
+    font-size: clamp(54px, 15vw, 72px);
+  }
+
+  .intro {
+    max-width: 260px;
+    font-size: 13px;
+  }
+
+  .hero-art {
+    width: 112%;
+    height: auto;
+    right: -19%;
+    bottom: 1px;
+  }
+
+  .hero-car {
+    margin-top: 0;
+  }
+
+  .vehicle-card {
+    margin-top: 22px;
+    padding: 22px 18px;
+  }
+
+  .card-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px 12px;
+  }
+
+  .status {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .start-button {
+    grid-column: 2;
+    grid-row: 1;
+    padding-inline: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
